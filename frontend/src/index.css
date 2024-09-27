@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Confetti animation */
+.confetti {
+  position: absolute;
+  width: 10px;
+  height: 20px;
+  background-color: white;
+  animation: fall 4s infinite ease-in-out;
+  top: -10%;
+}
+
+.confetti:nth-child(2) {
+  background-color: yellow;
+  left: 25%;
+  animation-delay: 0.5s;
+}
+
+.confetti:nth-child(3) {
+  background-color: pink;
+  left: 50%;
+  animation-delay: 1s;
+}
+
+@keyframes fall {
+  0% {
+    transform: rotate(15deg) translateY(0);
+  }
+  100% {
+    transform: rotate(75deg) translateY(100vh);
+  }
+}
